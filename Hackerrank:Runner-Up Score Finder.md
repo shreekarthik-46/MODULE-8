@@ -1,11 +1,11 @@
-# 🏆 Hackerrank:Runner-Up Score Finder in Python
+#  Hackerrank:Runner-Up Score Finder in Python
 
-## 🎯 AIM:
+##  AIM:
 To write a Python program that takes a list of scores from participants and finds the **runner-up score** (i.e., the second-highest score), eliminating any duplicates.
 
 ---
 
-## 🧠 ALGORITHM:
+##  ALGORITHM:
 
 1. **Start**
 2. Create a variable `n` and get its value from the user (number of participants)
@@ -18,10 +18,28 @@ To write a Python program that takes a list of scores from participants and find
 
 ---
 
-## 💻 PROGRAM:
+##  PROGRAM:
+```
+n=int(input())
+student_marks={}
+for _ in range(n):
+    line=input().split()
+    name,scores=line[0],line[1::]
+    scores=map(float,scores)
+    student_marks[name]=scores
+query_name=input()
+marks=0
+for i in student_marks[query_name]:
+    marks=marks+i
+avg=marks/3
+print("%.2f"%avg)
+```
 
-ADD CODE HERE
+
 
 ## OUTPUT
 
+![runup](https://github.com/user-attachments/assets/43879367-be84-44a7-b7f0-31d8c6fad51a)
+
 ## RESULT
+Thus a Python program that takes a list of scores from participants and finds the **runner-up score** (i.e., the second-highest score), eliminating any duplicates is created.
